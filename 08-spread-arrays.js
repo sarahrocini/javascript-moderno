@@ -1,0 +1,39 @@
+/* Aula 08 - Spread Operator com arrays
+*
+*
+* O Spread ( ... ) abre os elementos de um array para que eles possam
+* ser usados dentro de outro array.
+*/
+
+const numeros = [1, 2, 3];
+
+// Cria um novo array com os mesmos valores de 'numeros' .
+const copia = [ ... numeros];
+
+// Copia os valores existentes e acrescenta 4 e 5 ao final.
+const novosNumeros = [ ... numeros, 4, 5];
+
+// O Spread tambem pode aparecer depois de outros elementos do novo array.
+const numerosComInicio = [1, ... [2, 3, 4]];
+
+console.log("Copia:", copia);
+console.log("Numeros com novos valores:", novosNumeros);
+console.log("Numeros com valor no inicio:", numerosComInicio);
+
+// Cada array representa um grupo diferente de tecnologias.
+const frontEnd = ["HTML", "CSS", "JavaScript"];
+const backEnd = ["Node.js", "PostgreSQL"];
+
+// Os dois arrays sao abertos e seus itens formam um unico novo array.
+const tecnologias = [ ... frontEnd, ... backEnd];
+
+console.log("Tecnologias:", tecnologias);
+
+// A atribuicao direta nao cria uma copia: as duas variaveis apontam para o mesmo array.
+const originalPorReferencia = [1, 2, 3];
+const copiaPorReferencia = originalPorReferencia;
+
+// Esta alteracao tambem aparece em originalPorReferencia'.
+copiaPorReferencia.push(4);
+
+console.log("Original com atribuicao direta:", originalPorReferencia);
