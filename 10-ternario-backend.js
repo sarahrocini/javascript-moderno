@@ -25,5 +25,5 @@ const resultado = nota >= 9
 
 console.log("Resultado com ternario aninhado:", resultado);
 
-// fim
+// fim...
 
